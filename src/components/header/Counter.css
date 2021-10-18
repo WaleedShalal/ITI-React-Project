@@ -1,0 +1,22 @@
+.counter__wrapper {
+  margin: 100px auto;
+  padding: 20px;
+  border: 1px solid white;
+  box-shadow: 1px 1px 10px 5px white, -1px -1px 10px 5px white;
+  width: 400px;
+  background-color: black;
+  border-radius: 20px;
+}
+:hover:is(.btn__decrease, .btn__increase, .btn__reset) {
+  background-color: white;
+  font-weight: bold;
+}
+.btn__decrease:hover {
+  color: red;
+}
+.btn__increase:hover {
+  color: blue;
+}
+.btn__reset:hover {
+  color: green;
+}
