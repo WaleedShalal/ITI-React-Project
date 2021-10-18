@@ -12,7 +12,7 @@ function CounterAcions() {
     counter && setCounter(counter - value);
   };
 
-  const resetCounter = (value = 1) => {
+  const resetCounter = () => {
     setCounter(0);
   };
   return (
