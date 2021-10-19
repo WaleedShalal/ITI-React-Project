@@ -28,23 +28,24 @@ function ProductDetails() {
             <img src={image} alt='product-img' />
           </figure>
           <div className=' offset-1 col-7 '>
-            <div className='d-flex align-items-baseline'>
+            <div className='d-flex flex-wrap align-items-baseline'>
               <span className='text-capitalize fs-3 fw-bold'>title :</span>
-              <p className='text-start fs-5 ms-3'>{title}</p>
+              <div className='text-start fs-5 ms-3'>{title}</div>
             </div>
-            <div className='d-flex flex-wrap'>
+            <div className='d-flex flex-wrap align-items-baseline'>
               <span className='text-capitalize fs-3 fw-bold'>
                 description :
               </span>
-              <p className='text-start fs-5'>{description}</p>
+              <div className='text-start fs-5 ms-3'>{description}</div>
             </div>
-            <div className='d-flex align-items-baseline'>
+
+            <div className='d-flex flex-wrap align-items-baseline'>
               <span className='text-capitalize fs-3 fw-bold'>category :</span>
               <div className='text-capitalize fs-5 text-start ms-3'>
                 {category}
               </div>
             </div>
-            <div className='d-flex align-items-baseline mb-5'>
+            <div className='d-flex flex-wrap align-items-baseline mb-5'>
               <span className='text-capitalize fs-3 fw-bold'>price :</span>
               <div className='text-capitalize fs-5 text-start ms-3'>
                 $ {price}
