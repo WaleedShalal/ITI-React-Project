@@ -1,0 +1,25 @@
+.for__padding {
+  padding: 15px;
+}
+.product__item {
+  padding: 20px 10px;
+  border-radius: 15px;
+  box-shadow: 1px 1px 15px 5px rgb(189, 186, 186);
+  cursor: pointer;
+}
+.product__img {
+  text-align: center;
+}
+.product__img img {
+  max-width: 180px;
+  height: 200px;
+  border-radius: 15px;
+  transition: all 0.3s ease-in-out;
+}
+.product__item:hover .product__img img {
+  transform: scale(1.1);
+}
+.product__details:hover {
+  color: blue;
+  background-color: white;
+}
