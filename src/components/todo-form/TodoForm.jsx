@@ -13,10 +13,17 @@ function TodoForm() {
     id: '',
   });
   const [size, setSize] = useState();
+  const [isValid, seIsValid] = useState(true);
   useEffect(() => {
     todoTitle.current.focus();
     todoList.todoItemsList.length ? setSize('col-6') : setSize('col-12');
   }, [todoList]);
+
+  useEffect(() => {
+    todoInputs.title !== '' && todoInputs.content !== ''
+      ? seIsValid(false)
+      : seIsValid(true);
+  }, [todoInputs]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -68,7 +75,9 @@ function TodoForm() {
           value={todoInputs.content}
         />
       </div>
-      <button className='add__btn btn btn-primary text-capitalize w-25'>
+      <button
+        disabled={isValid}
+        className='add__btn btn btn-primary text-capitalize w-25'>
         add
       </button>
     </form>
