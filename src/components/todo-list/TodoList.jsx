@@ -4,7 +4,7 @@ import './TodoList.css';
 
 function TodoList() {
   return (
-    <section className='todo__list text-center text-white mt-5 pt-1'>
+    <section className='todo__list text-center text-white my-5 pt-1 pb-5'>
       <h1 className='text-capitalize my-5 text-white'>to-do </h1>
       <div className='container'>
         <div className='row'>
