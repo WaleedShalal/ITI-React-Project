@@ -31,6 +31,11 @@ function Navbar() {
                 Counter
               </Link>
             </li>
+            <li className='nav-item'>
+              <Link className='nav-link' to='/todo-list'>
+                ToDo
+              </Link>
+            </li>
           </ul>
         </div>
       </div>

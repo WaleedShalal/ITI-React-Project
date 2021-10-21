@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import Home from './components/home/Home';
 import ProductDetails from './components/product-details/ProductDetails';
+import TodoList from './components/todo-list/TodoList';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Switch>
           <Route component={ProductDetails} path='/product-details/:id' />
           <Route component={CounterAcions} path='/CounterAcions' />
+          <Route component={TodoList} path='/todo-list' />
           <Route component={Home} path='/' exact />
         </Switch>
       </div>

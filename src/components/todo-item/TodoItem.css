@@ -1,0 +1,11 @@
+.todo__item {
+  padding: 15px;
+  border-radius: 15px;
+}
+.todo__item__num {
+  border-radius: 10px;
+}
+.remove__btn:hover {
+  color: red;
+  background-color: white;
+}
