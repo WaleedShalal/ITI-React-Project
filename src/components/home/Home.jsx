@@ -1,42 +1,24 @@
 import React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
-import { useState } from 'react';
 import ProductItem from '../product-item/ProductItem';
 import './Home.css';
 import PageLoader from './../page-loader/PageLoader';
+import { fetchProducts } from '../../redux/products/productActions';
 
 function Home() {
-  const [data, setData] = useState([]);
-  const [isLoading, setIsLpoading] = useState(false);
-
+  const { getProducts } = useSelector((state) => state);
+  const dispatch = useDispatch();
   useEffect(() => {
-    getData();
+    return !localStorage.getItem('savedData')
+      ? dispatch(fetchProducts())
+      : null;
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  const getData = () => {
-    setIsLpoading(true);
-    if (localStorage.getItem('savedData')) {
-      setData(JSON.parse(localStorage.getItem('savedData')));
-      setIsLpoading(false);
-    } else {
-      fetch('https://fakestoreapi.com/products')
-        .then((res) => res.json())
-        .then((res) => {
-          setData(res);
-          setIsLpoading(false);
-          localStorage.setItem('savedData', JSON.stringify(res));
-        });
-    }
-  };
   return (
     <section className='products__container mt-5 d-flex flex-row flex-wrap justify-content-between'>
-      {isLoading ? (
-        <PageLoader />
-      ) : (
-        data.map((product) => (
-          <ProductItem key={product.id} product={product} />
-        ))
-      )}
+      {getProducts.isLoading ? <PageLoader /> : <ProductItem />}
     </section>
   );
 }

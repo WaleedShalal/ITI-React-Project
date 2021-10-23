@@ -1,33 +1,20 @@
-import { useEffect } from 'react';
-import { useState } from 'react';
 import { useParams } from 'react-router';
 import { Link } from 'react-router-dom';
 import PageLoader from '../page-loader/PageLoader';
 import './ProductDetails.css';
+import { useSelector } from 'react-redux';
 function ProductDetails() {
   const { id } = useParams();
-  const [productDetails, setProductDetails] = useState({});
-  const [isLoading, setIsLpoading] = useState(false);
 
-  useEffect(() => {
-    getProductDetails();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  const { getProducts } = useSelector((state) => state);
 
-  const getProductDetails = () => {
-    setIsLpoading(true);
-    fetch(`https://fakestoreapi.com/products/${id}`)
-      .then((res) => res.json())
-      .then((res) => {
-        setProductDetails(res);
-        setIsLpoading(false);
-      });
-  };
+  const productDetails = () =>
+    getProducts.products.filter((item) => item.id === parseInt(id))[0];
 
-  const { title, price, category, description, image } = productDetails;
+  const { title, price, category, description, image } = productDetails();
   return (
     <section className='text-center text-white mt-3'>
-      {isLoading ? (
+      {getProducts.isLoading ? (
         <PageLoader />
       ) : (
         <>

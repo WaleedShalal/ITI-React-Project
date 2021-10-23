@@ -27,13 +27,23 @@ function Navbar() {
               </Link>
             </li>
             <li className='nav-item'>
-              <Link className='nav-link' to='/CounterAcions'>
+              <Link className='nav-link' to='/counter'>
                 Counter
               </Link>
             </li>
             <li className='nav-item'>
               <Link className='nav-link' to='/todo-list'>
                 ToDo
+              </Link>
+            </li>
+            <li className='nav-item'>
+              <Link className='nav-link' to='/login'>
+                Login
+              </Link>
+            </li>
+            <li className='nav-item'>
+              <Link className='nav-link' to='/register'>
+                Register
               </Link>
             </li>
           </ul>
