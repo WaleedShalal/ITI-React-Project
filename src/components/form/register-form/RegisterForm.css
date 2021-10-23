@@ -1,0 +1,12 @@
+.register__form {
+  box-shadow: 1px 1px 15px 5px rgb(189, 186, 186);
+  border-radius: 15px;
+}
+
+.register__btn {
+  border-radius: 15px;
+}
+.register__btn:hover {
+  color: blue;
+  background-color: white;
+}

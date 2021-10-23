@@ -1,0 +1,18 @@
+.login__form {
+  box-shadow: 1px 1px 15px 5px rgb(189, 186, 186);
+  border-radius: 15px;
+}
+.input__style {
+  border: black;
+  border-radius: 15px;
+}
+.login__btn {
+  border-radius: 15px;
+}
+.login__btn:hover {
+  color: blue;
+  background-color: white;
+}
+.error__message {
+  border-radius: 15px;
+}
