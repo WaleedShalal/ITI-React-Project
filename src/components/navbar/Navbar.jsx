@@ -1,14 +1,11 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import './Navbar.css';
 
 function Navbar() {
   return (
     <nav className='main__navbar navbar navbar-expand-lg navbar-dark bg-black'>
       <div className='container-fluid'>
-        <Link className='navbar-brand' to='#'>
-          Navbar
-        </Link>
         <button
           className='navbar-toggler'
           type='button'
@@ -22,29 +19,34 @@ function Navbar() {
         <div className='collapse navbar-collapse' id='navbarNav'>
           <ul className='navbar-nav'>
             <li className='nav-item'>
-              <Link className='nav-link active' aria-current='page' to='/'>
+              <NavLink className='nav-link' aria-current='page' to='/home'>
                 Home
-              </Link>
+              </NavLink>
             </li>
             <li className='nav-item'>
-              <Link className='nav-link' to='/counter'>
+              <NavLink className='nav-link' aria-current='page' to='/products'>
+                Products
+              </NavLink>
+            </li>
+            <li className='nav-item'>
+              <NavLink className='nav-link' to='/counter'>
                 Counter
-              </Link>
+              </NavLink>
             </li>
             <li className='nav-item'>
-              <Link className='nav-link' to='/todo-list'>
+              <NavLink className='nav-link' to='/todo-list'>
                 ToDo
-              </Link>
+              </NavLink>
             </li>
             <li className='nav-item'>
-              <Link className='nav-link' to='/login'>
+              <NavLink className='nav-link' to='/login'>
                 Login
-              </Link>
+              </NavLink>
             </li>
             <li className='nav-item'>
-              <Link className='nav-link' to='/register'>
+              <NavLink className='nav-link' to='/register'>
                 Register
-              </Link>
+              </NavLink>
             </li>
           </ul>
         </div>
