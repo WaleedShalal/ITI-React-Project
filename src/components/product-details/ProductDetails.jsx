@@ -50,7 +50,7 @@ function ProductDetails() {
                   </div>
                 </div>
                 <Link
-                  to='/'
+                  to='/products'
                   className='product__details__back btn btn-primary text-capitalize w-25'>
                   go back
                 </Link>

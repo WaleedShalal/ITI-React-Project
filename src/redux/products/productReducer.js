@@ -1,7 +1,9 @@
 import * as actionTypes from './productTypes';
 const initialState = {
   isLoading: false,
-  products: [],
+  products: localStorage.getItem('savedData')
+    ? JSON.parse(localStorage.getItem('savedData'))
+    : [],
   errors: '',
 };
 
